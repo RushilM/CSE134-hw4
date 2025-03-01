@@ -9,10 +9,10 @@
     <meta name="keywords" content="Rushil, Portfolio, Contact, Software Engineer, AI, Machine Learning">
     <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+
 <header>
     <h1>Contact</h1>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -25,86 +25,52 @@
     </nav>
 </header>
     
-    <main>
-        <!-- Wrap content for better readability -->
-        <div class="content-wrapper">
-            <section>
-                <h2>Get in Touch</h2>
-                <p>If you’d like to connect, feel free to send me a message using the form below or reach out via email or LinkedIn.</p>
+<main>
+    <div class="content-wrapper">
+        <section>
+            <h2>Get in Touch</h2>
+            <p>If you’d like to connect, feel free to send me a message using the form below.</p>
 
-                <!-- Contact Form -->
-                <form action="https://formspree.io/f/{your_form_id}" method="POST">
-                    <fieldset>
-                        <legend>Contact Form</legend>
+            
+            <form id="contact-form" method="POST" action="https://httpbin.org/post">
+                <fieldset>
+                    <legend>Contact Form</legend>
 
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+                    
+                    <label for="name">Name: <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="50"
+                        pattern="^[a-zA-Z\s]+$" title="Only letters and spaces allowed.">
 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="_replyto" required>
+                   
+                    <label for="email">Email: <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required 
+                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+                        title="Please enter a valid email (e.g., example@domain.com).">
 
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <label for="message">Message: <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500"></textarea>
 
-                        <button type="submit">Send Message</button>
-                    </fieldset>
-                </form>
-            </section>
+                    
+                    <button type="submit">Send Message</button>
+                </fieldset>
+            </form>
+        </section>
 
-            <section>
-                <h2>Other Ways to Reach Me</h2>
-                <p>Email: <a href="mailto:rushilm8@gmail.com">rushilm8@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://linkedin.com/in/rushil-mohandas" target="_blank">linkedin.com/in/rushil-mohandas</a></p>
-            </section>
+        <section>
+            <h2>Other Ways to Reach Me</h2>
+            <p>Email: <a href="mailto:rushilm8@gmail.com">rushilm8@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/rushil-mohandas" target="_blank">linkedin.com/in/rushil-mohandas</a></p>
+        </section>
+    </div>
+</main>
 
-            <!-- Custom Semantic CSS Element -->
-            <custom-card>
-                <style>
-                    custom-card {
-                        display: block;
-                        padding: 20px;
-                        margin: 20px 0;
-                        border: 2px solid #333;
-                        background-color: #f4f4f4;
-                        border-radius: 8px;
-                        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-                    }
-                </style>
-                <h3>Custom Card</h3>
-                <p>This is an example of a custom semantic CSS element.</p>
-            </custom-card>
+<footer>
+    <p>&copy; 2025 Rushil</p>
+    <address>
+        Contact: <a href="mailto:rushilm8@gmail.com">rushilm8@gmail.com</a>
+    </address>
+</footer>
 
-            <!-- MathML Formula -->
-            <section>
-                <h2>Fun with MathML</h2>
-                <p>Einstein's famous equation:</p>
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <msup>
-                        <mi>E</mi>
-                        <mn>2</mn>
-                    </msup>
-                    <mo>=</mo>
-                    <mi>m</mi>
-                    <mo>&#8290;</mo>
-                    <msup>
-                        <mi>c</mi>
-                        <mn>2</mn>
-                    </msup>
-                </math>
-                <p><strong>Why wasn’t MathML widely used until recently?</strong></p>
-                <p>Despite being in the HTML specification for a long time, MathML adoption was limited due to:</p>
-                <p><strong>Browser Support:</strong> Many popular browsers, like Google Chrome, did not support MathML natively until recently. Without cross-browser compatibility, developers had to rely on workarounds like MathJax or other libraries.</p>
-                <p><strong>Performance Issues:</strong> Early implementations of MathML in browsers were often slow, making it impractical for complex mathematical content.</p>
-                <p>With the recent improvements in browser compatibility, including support in modern versions of Chrome and Edge, MathML is becoming more practical for developers.</p>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Rushil</p>
-        <address>
-            Contact: <a href="mailto:rushilm8@gmail.com">rushilm8@gmail.com</a>
-        </address>
-    </footer>
 </body>
 </html>
