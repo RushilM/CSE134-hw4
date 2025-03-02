@@ -9,7 +9,11 @@
 </head>
 <body>
     <header>
-        <h1>Experience</h1>
+        <div class="header-title">
+            <h1>Experience</h1>
+            <button id="theme-toggle" aria-label="Toggle light/dark mode">🌞</button>
+        </div>
+
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
         <nav>
@@ -23,12 +27,13 @@
             </ul>
         </nav>
     </header>
+    
     <main>
         <!-- Wrap content for better readability -->
         <div class="content-wrapper">
             <section>
                 <h2>Professional Experience</h2>
-                
+
                 <details>
                     <summary><b>Software Engineer - Dermose</b> <i>(Sept 2024 - Present)</i></summary>
                     <p>Designed scalable APIs for processing image data via <code>POST</code> requests.</p>
@@ -96,5 +101,7 @@ while (success) {
         </noscript>
         <p>&copy; 2025 Rushil</p>
     </footer>
+
+    <script src="theme-toggle.js"></script>
 </body>
 </html>
