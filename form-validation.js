@@ -30,9 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Masking for Name Field (Only Letters & Spaces)
-    nameField.addEventListener("keypress", function (event) {
-        maskInput(event, /^[a-zA-Z\s]$/, nameField, "Only letters and spaces allowed.");
-    });
+ 
 
     /** ============================= **/
     /**  CUSTOM VALIDATION MESSAGES  **/
@@ -46,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    nameField.addEventListener("input", () => validateField(nameField, "Name must contain only letters and spaces."));
+    
     emailField.addEventListener("input", () => validateField(emailField, "Enter a valid email address (example@domain.com)."));
     messageField.addEventListener("input", () => validateField(messageField, "Message must be at least 10 characters."));
 
